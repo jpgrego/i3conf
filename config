@@ -163,16 +163,32 @@ bindsym $mod+t border normal
 bindsym $mod+y border pixel
 bindsym $mod+u border none
 
+# Brightness
+bindsym XF86MonBrightnessDown exec ~/.i3/brightness - 1
+bindsym XF86MonBrightnessUp exec ~/.i3/brightness + 1
+
 # Volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute 
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute 
+bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Lock screen
 bindsym Control+Mod1+l exec i3lock -c 000000
+bindsym XF86Sleep exec i3lock -c 000000
+
+# Open Firefox
+bindsym XF86HomePage exec firefox
+
+# Open Thunderbird
+bindsym XF86Mail exec thunderbird
+
+# Open calculator
+bindsym XF86Calculator exec urxvtc -e calc
 
 # autostart programs
+exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id volumeicon 
+exec --no-startup-id volumeicon
 exec --no-startup-id redshift-gtk
 exec --no-startup-id parcellite
 exec --no-startup-id compton
