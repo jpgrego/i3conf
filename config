@@ -186,7 +186,6 @@ bindsym XF86Mail exec thunderbird
 bindsym XF86Calculator exec urxvtc -e calc
 
 # autostart programs
-exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id volumeicon
 exec --no-startup-id redshift-gtk
