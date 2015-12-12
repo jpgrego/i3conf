@@ -188,8 +188,9 @@ bindsym XF86Calculator exec urxvtc -e calc
 # autostart programs
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id pcmanfm -d
+exec --no-startup-id urxvtd --quiet --opendisplay --fork
 exec --no-startup-id volumeicon
 exec --no-startup-id redshift
 exec --no-startup-id parcellite
 exec --no-startup-id compton
-exec --no-startup-id urxvtd --quiet --opendisplay --fork
+exec --no-startup-id syncthing-gtk
