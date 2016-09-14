@@ -9,6 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+exec --no-startup-id /usr/share/lightdmxrand.sh
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -27,8 +28,8 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -185,12 +186,18 @@ bindsym XF86Mail exec thunderbird
 # Open calculator
 bindsym XF86Calculator exec urxvtc -e calc
 
+for_window [title="^xfce4-notifyd$"] floating enable
+for_window [title="BEEMELT - Home"] floating enable
+for_window [title="BEEMELT - Home"] border normal
+
 # autostart programs
 exec --no-startup-id nm-applet
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id pcmanfm -d
 exec --no-startup-id volumeicon
 exec --no-startup-id redshift-gtk
 exec --no-startup-id parcellite
+exec --no-startup-id shutter
 exec --no-startup-id compton
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id urxvtd --quiet --opendisplay --fork
+exec --no-startup-id nitrogen --restore
