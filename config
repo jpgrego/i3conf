@@ -193,11 +193,9 @@ for_window [title="BEEMELT - Home"] border normal
 # autostart programs
 exec --no-startup-id nm-applet
 exec --no-startup-id pcmanfm -d
-exec --no-startup-id volumeicon
-exec --no-startup-id redshift-gtk
+exec --no-startup-id redshift
+exec --no-startup-id pasystray
 exec --no-startup-id parcellite
-exec --no-startup-id shutter
 exec --no-startup-id compton
-exec --no-startup-id pulseaudio --start
 exec --no-startup-id urxvtd --quiet --opendisplay --fork
 exec --no-startup-id nitrogen --restore
